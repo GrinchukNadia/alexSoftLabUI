@@ -1,0 +1,104 @@
+.articles{
+    margin-top: 40px;
+    width: 100%;
+}
+.articles_inner{
+    display: flex;
+    justify-content: space-between;
+    h2{
+        margin-bottom: 34px;
+    }
+    .about_us-p{
+        margin-bottom: 24px;
+    }
+}
+.article_block-aboutUs{
+    width: 28%;
+}
+.article_block-services{
+    width: 26%;
+}
+.article_block-review{
+    width: 33%;
+}
+.about_us-img{
+    width: fit-content;
+    padding: 4px;
+    border: 1px solid $lightGrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    picture {
+        // max-width: 270px;
+        // height: 140px;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+.read_more{
+    cursor: pointer;
+    text-align: end;
+    a{
+        color: $green;
+        &:hover{
+            color: darken($green, 10%);
+        }
+    }
+}
+
+//second part
+.article_block-card{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+.card_img {
+    margin-right: 18px;
+    picture{
+        display: block;
+        width: 64px;
+        height: 64px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+.card_text {
+    h4 {
+        margin: 0;
+        margin-bottom: 8px;
+    }
+    p{
+        margin: 0;
+    }
+}
+
+//third part
+.review p{
+    margin: 10px 0;
+}
+.article_block-review h2{
+    margin-bottom: 12px;
+}
+.review_title{
+    display: flex;
+    align-items: center;
+    h3{
+        margin: 0;
+    }
+}
+.review_title-svg{
+    margin-right: 11px;
+}
+.quote{
+    display: block;
+    width: 53px;
+    height: 44px;
+    fill: $lightGrey;
+}

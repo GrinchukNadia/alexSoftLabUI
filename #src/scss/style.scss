@@ -1,0 +1,49 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+    @font-face {
+        font-family: $font_name;
+        font-display: swap;
+        src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+        font-weight: #{$weight};
+        font-style: #{$style};
+    }
+}
+
+
+@import "fonts";
+@import "normalize";
+@import "variables";
+@import "container";
+@import "header";
+@import "carousel";
+@import "articles";
+@import "footer";
+
+.container_inner{
+    max-width: 1200px;
+    background-color: $white;
+    margin: 0 auto;
+    border-left: 20px solid rgb(49, 49, 49);
+    border-right: 20px solid rgb(49, 49, 49);
+}
+body{
+    font-family: 'GeorgiaRegular', Times, serif;
+    color: $mainText;
+    font-size: 13px;
+    line-height: 1.38;
+    background-color: rgb(49, 49, 49)
+}
+h1, h2, h3, h4, h5{
+    color: $titleColor;
+}
+h2{
+    font-size: 22px;
+}
+h3{
+    font-size: 16px;
+}
+h4{
+    font-size: 14px;
+}
+ul, li{
+    list-style: none;
+}
