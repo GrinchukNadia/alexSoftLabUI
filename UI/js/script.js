@@ -1,4 +1,60 @@
-// слайдер 
+//header navigation active links
+const links = document.querySelectorAll('.nav_li');
+let current = document.getElementsByClassName('nav_active');
+
+links.forEach(item => {
+    item.addEventListener('click', () => {
+        current[0].classList.remove('nav_active')
+        item.classList.add('nav_active')
+    })
+})
+//header submenu
+const isMobile = {
+    Android: function () {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function () {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function () {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function () {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function () {
+        return navigator.userAgent.match(/IEMobile/i);
+    },
+    any: function () {
+        return (
+                isMobile.Android()
+                || isMobile.BlackBerry()
+                || isMobile.iOS()
+                || isMobile.Opera()
+                || isMobile.Windows()
+                );
+    }
+};
+
+if(isMobile.any()) {
+    document.body.classList.add('mobile')
+    let navArr = document.querySelector('.nav_li-dropdown')
+    navArr.addEventListener('click', () => {
+        navArr.classList.toggle('sub_active')
+    })
+}else{
+    document.body.classList.add('ps')
+}
+//header mobile menu
+const mobileMenu = document.querySelector('.menu_burger');
+const menu = document.querySelector('.menu');
+mobileMenu.addEventListener('click', () => {
+    document.body.classList.toggle('lock')
+    menu.classList.toggle('menu_active'); 
+    mobileMenu.classList.toggle('menu_burger-active')
+})
+
+// slider 
 
 let slider = (containerClass, slidesClass, slideClass, paggination) => {
     const slideContainer = document.querySelector(containerClass);

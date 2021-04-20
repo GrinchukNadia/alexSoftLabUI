@@ -30,8 +30,12 @@ body{
     color: $mainText;
     font-size: 13px;
     line-height: 1.38;
-    background-color: rgb(49, 49, 49)
+    background-color: rgb(49, 49, 49);
 }
+body.lock{
+    overflow: hidden;
+}
+
 h1, h2, h3, h4, h5{
     color: $titleColor;
 }

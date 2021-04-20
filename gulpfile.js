@@ -151,19 +151,6 @@ gulp.task('otf2ttf', function()  {
     .pipe(dest(source_folder + '/fonts/'));
 })
 
-gulp.task('svgSprite', function() {
-    return gulp.src([source_folder + '/iconsprite/*.svg'])
-    .pipe(svgSprite({
-        mode: {
-            stack: {
-                sprite: "../icons/icons.svg",
-                example: true
-            }
-        }
-    }))
-    .pipe(dest(path.build.img))
-})
-
 function fontsStyle() {
     let file_content = fs.readFileSync(source_folder + '/scss/fonts.scss');
     if (file_content == '') {
