@@ -139,7 +139,7 @@ function fonts() {
 }
 
 gulp.task('deploy', function() {
-    return gulp.src('./oyyo/**/*')
+    return gulp.src('./UI/**/*')
         .pipe(ghPages());
 });
 
