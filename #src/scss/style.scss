@@ -25,6 +25,12 @@
     border-left: 20px solid rgb(49, 49, 49);
     border-right: 20px solid rgb(49, 49, 49);
 }
+@media(max-width: 500px) {
+    .container_inner{
+        border-left: none;
+        border-right: none;
+    }
+}
 body{
     font-family: 'GeorgiaRegular', Times, serif;
     color: $mainText;

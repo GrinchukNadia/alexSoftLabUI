@@ -21,6 +21,8 @@ h1{
     height: 100%;
     width: 100%;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 .paggination{
     display: flex;
@@ -105,6 +107,9 @@ h1{
     width: 16px;
     height: 28px;
     fill: $green;
+}
+body.mobile .arrows{
+    display: none;
 }
 @media (max-width: 960px){
     .carousel{
